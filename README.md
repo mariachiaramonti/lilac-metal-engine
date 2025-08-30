@@ -10,6 +10,9 @@ Rendered a wireframe cone and exported it into usda to view and inspect in Blend
 Loaded in a train model and rendered it.
 <img width="1674" height="1210" alt="image" src="https://github.com/user-attachments/assets/8723c35f-7a29-41a7-b4cf-5369d292c759" />
 
+Loaded in a mushroom model and rendered it.
+<img width="1674" height="1210" alt="image" src="https://github.com/user-attachments/assets/3e25581e-cb4f-4951-a849-c8b4f9296244" />
+
 
 ### Previous updates
 
