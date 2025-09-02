@@ -20,19 +20,48 @@ class Renderer : NSObject {
         
         // create a mesh
         let allocator = MTKMeshBufferAllocator(device: device)
-        let size: Float = 0.8
-        let mdlMesh = MDLMesh(
-            boxWithExtent: [size, size, size],
-            segments: [1, 1, 1],
-            inwardNormals: false,
-            geometryType: .triangles,
-            allocator: allocator)
+        guard let assetURL = Bundle.main.url(
+            forResource: "train",
+            withExtension: "usdz") else {
+            fatalError("Model not found")
+        }
+        
+        let vertexDescriptor = MTLVertexDescriptor()
+        vertexDescriptor.attributes[0].format = .float3
+        vertexDescriptor.attributes[0].offset = 0
+        vertexDescriptor.attributes[0].bufferIndex = 0
+        vertexDescriptor.layouts[0].stride = MemoryLayout<SIMD3<Float>>.stride
+        
+        let meshDescriptor = MTKModelIOVertexDescriptorFromMetal(vertexDescriptor)
+        (meshDescriptor.attributes[0] as! MDLVertexAttribute).name = MDLVertexAttributePosition
+        
+        let asset = MDLAsset(
+            url: assetURL,
+            vertexDescriptor: meshDescriptor,
+            bufferAllocator: allocator
+        )
+        let mdlMesh = asset.childObjects(of: MDLMesh.self).first as! MDLMesh
+        
         do {
             mesh = try MTKMesh(mesh: mdlMesh, device: device)
         } catch {
-            print(error.localizedDescription)
+            fatalError("Mesh not loaded")
         }
         vertexBuffer = mesh.vertexBuffers[0].buffer
+        
+//        let size: Float = 0.8
+//        let mdlMesh = MDLMesh(
+//            boxWithExtent: [size, size, size],
+//            segments: [1, 1, 1],
+//            inwardNormals: false,
+//            geometryType: .triangles,
+//            allocator: allocator)
+//        do {
+//            mesh = try MTKMesh(mesh: mdlMesh, device: device)
+//        } catch {
+//            print(error.localizedDescription)
+//        }
+//        vertexBuffer = mesh.vertexBuffers[0].buffer
             
         // create the shader function library
         let library = device.makeDefaultLibrary()
