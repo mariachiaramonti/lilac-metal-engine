@@ -6,6 +6,13 @@ Chapter 3: The Rendering Pipeline \
 Created a new multiplatform xcode project using MetalKit. Render an MTKView with some text below.
 <img width="2024" height="1124" alt="image" src="https://github.com/user-attachments/assets/b62ab572-ab30-4283-853d-39f43e8e7f39" />
 
+Added a Renderer class derived from NSObject, which holds a device, command queue, shader library, mesh, vertex buffer and pipeline state object. \
+In the init function, build a cube with ModelIO, create the shader library and add vertex and fragment functions to it, create the pipeline state object with these two shader functions.\
+Added a very simple vertex shader and fragment shader to render a red cube.
+
+In the draw function, set up the command buffer and render command encoder, set the pipeline state object and vertex buffer on the render command encoder, draw the mesh.
+<img width="1298" height="1124" alt="image" src="https://github.com/user-attachments/assets/68539037-5ff2-4f37-bc8c-39ad6f11073d" />
+
 ### Previous updates
 
 Chapter 2: 3D Models \
