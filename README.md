@@ -2,6 +2,10 @@
 Building a Metal rendering engine in Swift following the [Metal by Tutorials book](https://www.kodeco.com/books/metal-by-tutorials).
 
 ### Latest update
+Chapter 3: The Rendering Pipeline - challenge \
+Loaded in train model replacing cube. Changed its position and colour.
+<img width="1298" height="1124" alt="image" src="https://github.com/user-attachments/assets/d6d8ac05-d12c-430c-8e9d-2c6ca97909cf" />
+
 Chapter 3: The Rendering Pipeline \
 Created a new multiplatform xcode project using MetalKit. Render an MTKView with some text below.
 <img width="2024" height="1124" alt="image" src="https://github.com/user-attachments/assets/b62ab572-ab30-4283-853d-39f43e8e7f39" />
