@@ -6,6 +6,9 @@ Chapter 4: The Vertex Function \
 Rendered a quad made of two hardcoded triangles.
 <img width="1132" height="1124" alt="image" src="https://github.com/user-attachments/assets/1702ea98-3815-47f6-982c-8a50c925699c" />
 
+Made the quad move.
+![output](https://github.com/user-attachments/assets/96b9526a-7c09-44df-b1fd-16cfe334a1d6)
+
 ### Previous updates
 Chapter 3: The Rendering Pipeline - challenge \
 Loaded in train model replacing cube. Changed its position and colour.
