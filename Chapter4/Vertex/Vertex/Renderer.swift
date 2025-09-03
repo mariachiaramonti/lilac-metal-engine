@@ -44,6 +44,7 @@ class Renderer: NSObject {
     lazy var quad: Quad = {
         Quad(device: Self.device, scale: 0.8)
     }()
+    var timer: Float = 0
     
     init(metalView: MTKView) {
     guard
@@ -93,36 +94,45 @@ extension Renderer: MTKViewDelegate {
     }
 
     func draw(in view: MTKView) {
-    guard
-      let commandBuffer = Self.commandQueue.makeCommandBuffer(),
-      let descriptor = view.currentRenderPassDescriptor,
-      let renderEncoder =
-        commandBuffer.makeRenderCommandEncoder(
-          descriptor: descriptor) else {
-        return
-    }
-    renderEncoder.setRenderPipelineState(pipelineState)
+        guard
+          let commandBuffer = Self.commandQueue.makeCommandBuffer(),
+          let descriptor = view.currentRenderPassDescriptor,
+          let renderEncoder =
+            commandBuffer.makeRenderCommandEncoder(
+              descriptor: descriptor) else {
+            return
+        }
+        
+        timer += 0.005
+        var currentTime = sin(timer)
+        
+        renderEncoder.setVertexBytes(
+            &currentTime,
+            length: MemoryLayout<Float>.stride,
+            index: 11
+        )
+        renderEncoder.setRenderPipelineState(pipelineState)
 
-    // do drawing here
-    renderEncoder.setVertexBuffer(
-        quad.vertexBuffer,
-        offset: 0,
-        index: 0
-    )
-    
-    renderEncoder.drawPrimitives(
-        type: .triangle,
-        vertexStart: 0,
-        vertexCount: quad.vertices.count
-    )
+        // do drawing here
+        renderEncoder.setVertexBuffer(
+            quad.vertexBuffer,
+            offset: 0,
+            index: 0
+        )
+        
+        renderEncoder.drawPrimitives(
+            type: .triangle,
+            vertexStart: 0,
+            vertexCount: quad.vertices.count
+        )
 
-    renderEncoder.endEncoding()
-    guard let drawable = view.currentDrawable else {
-      return
-    }
-    commandBuffer.present(drawable)
-    commandBuffer.commit()
-    }
+        renderEncoder.endEncoding()
+        guard let drawable = view.currentDrawable else {
+          return
+        }
+        commandBuffer.present(drawable)
+        commandBuffer.commit()
+        }
 }
 
     // swiftlint:enable implicitly_unwrapped_optional

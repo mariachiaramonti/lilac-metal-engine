@@ -1,9 +1,12 @@
 #include <metal_stdlib>
 using namespace metal;
 
-vertex float4 vertex_main(constant packed_float3 *vertices [[buffer(0)]],
-                          uint vertexID [[vertex_id]]) {
+vertex float4 vertex_main(
+                          constant packed_float3 *vertices [[buffer(0)]],
+                          constant float &timer [[buffer(11)]], uint vertexID [[vertex_id]])
+{
     float4 position = float4(vertices[vertexID], 1);
+    position.y += timer;
     return position;
 }
 
