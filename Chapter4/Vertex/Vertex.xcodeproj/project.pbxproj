@@ -16,6 +16,8 @@
 		824771002AA80C930095AB72 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824770FF2AA80C930095AB72 /* MetalView.swift */; };
 		AD763D482E68C7D0006295F1 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD763D472E68C7CE006295F1 /* Quad.swift */; };
 		AD763D4D2E6A1FCB006295F1 /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD763D4C2E6A1FBF006295F1 /* VertexDescriptor.swift */; };
+		AD763D4F2E6A24B4006295F1 /* ShadersChallenge.metal in Sources */ = {isa = PBXBuildFile; fileRef = AD763D4E2E6A24AE006295F1 /* ShadersChallenge.metal */; };
+		AD763D512E6A25A8006295F1 /* RendererChallenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD763D502E6A25A8006295F1 /* RendererChallenge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		824770FF2AA80C930095AB72 /* MetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		AD763D472E68C7CE006295F1 /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
 		AD763D4C2E6A1FBF006295F1 /* VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
+		AD763D4E2E6A24AE006295F1 /* ShadersChallenge.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ShadersChallenge.metal; sourceTree = "<group>"; };
+		AD763D502E6A25A8006295F1 /* RendererChallenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendererChallenge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +66,12 @@
 		824770E22AA7FA0B0095AB72 /* Vertex */ = {
 			isa = PBXGroup;
 			children = (
+				AD763D4E2E6A24AE006295F1 /* ShadersChallenge.metal */,
 				AD763D4C2E6A1FBF006295F1 /* VertexDescriptor.swift */,
 				AD763D472E68C7CE006295F1 /* Quad.swift */,
 				824770E32AA7FA0B0095AB72 /* VertexApp.swift */,
 				824770F62AA7FDDA0095AB72 /* Renderer.swift */,
+				AD763D502E6A25A8006295F1 /* RendererChallenge.swift */,
 				824770F92AA804E20095AB72 /* Shaders.metal */,
 				824770E52AA7FA0B0095AB72 /* ContentView.swift */,
 				824770FF2AA80C930095AB72 /* MetalView.swift */,
@@ -180,8 +186,10 @@
 			files = (
 				AD763D4D2E6A1FCB006295F1 /* VertexDescriptor.swift in Sources */,
 				AD763D482E68C7D0006295F1 /* Quad.swift in Sources */,
+				AD763D512E6A25A8006295F1 /* RendererChallenge.swift in Sources */,
 				824770F72AA7FDDA0095AB72 /* Renderer.swift in Sources */,
 				824770E62AA7FA0B0095AB72 /* ContentView.swift in Sources */,
+				AD763D4F2E6A24B4006295F1 /* ShadersChallenge.metal in Sources */,
 				824771002AA80C930095AB72 /* MetalView.swift in Sources */,
 				824770E42AA7FA0B0095AB72 /* VertexApp.swift in Sources */,
 				824770FA2AA804E20095AB72 /* Shaders.metal in Sources */,
