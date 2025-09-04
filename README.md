@@ -9,6 +9,10 @@ Rendered a quad made of two hardcoded triangles.
 Made the quad move.
 ![output](https://github.com/user-attachments/assets/96b9526a-7c09-44df-b1fd-16cfe334a1d6)
 
+Changed the draw call to indexed, added a color vertex attribute with a different colour per vertex. 
+<img width="1132" height="1124" alt="image" src="https://github.com/user-attachments/assets/88d83fea-ff9e-4c15-8d95-fed6c8b8ea25" />
+
+
 ### Previous updates
 Chapter 3: The Rendering Pipeline - challenge \
 Loaded in train model replacing cube. Changed its position and colour.
