@@ -121,6 +121,12 @@ extension Renderer: MTKViewDelegate {
             index: 0
         )
         
+        renderEncoder.setVertexBuffer(
+            quad.colorBuffer,
+            offset: 0,
+            index: 1
+        )
+        
         renderEncoder.drawIndexedPrimitives(
             type: .triangle,
             indexCount: quad.indices.count,
