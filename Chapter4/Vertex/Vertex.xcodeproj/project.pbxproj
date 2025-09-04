@@ -15,6 +15,7 @@
 		824770FA2AA804E20095AB72 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 824770F92AA804E20095AB72 /* Shaders.metal */; };
 		824771002AA80C930095AB72 /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824770FF2AA80C930095AB72 /* MetalView.swift */; };
 		AD763D482E68C7D0006295F1 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD763D472E68C7CE006295F1 /* Quad.swift */; };
+		AD763D4D2E6A1FCB006295F1 /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD763D4C2E6A1FBF006295F1 /* VertexDescriptor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		824770F92AA804E20095AB72 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		824770FF2AA80C930095AB72 /* MetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		AD763D472E68C7CE006295F1 /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
+		AD763D4C2E6A1FBF006295F1 /* VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		824770E22AA7FA0B0095AB72 /* Vertex */ = {
 			isa = PBXGroup;
 			children = (
+				AD763D4C2E6A1FBF006295F1 /* VertexDescriptor.swift */,
 				AD763D472E68C7CE006295F1 /* Quad.swift */,
 				824770E32AA7FA0B0095AB72 /* VertexApp.swift */,
 				824770F62AA7FDDA0095AB72 /* Renderer.swift */,
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD763D4D2E6A1FCB006295F1 /* VertexDescriptor.swift in Sources */,
 				AD763D482E68C7D0006295F1 /* Quad.swift in Sources */,
 				824770F72AA7FDDA0095AB72 /* Renderer.swift in Sources */,
 				824770E62AA7FA0B0095AB72 /* ContentView.swift in Sources */,
