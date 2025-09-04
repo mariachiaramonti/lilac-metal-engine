@@ -2,6 +2,11 @@
 Building a Metal rendering engine in Swift following the [Metal by Tutorials book](https://www.kodeco.com/books/metal-by-tutorials).
 
 ### Latest update
+Chapter 4: The Vertex Function - Challenge \
+Rendered 50 points in a circle
+<img width="1132" height="1124" alt="image" src="https://github.com/user-attachments/assets/8421f0b3-425a-47f0-923a-b67bf163e5c3" />
+
+### Previous updates
 Chapter 4: The Vertex Function \
 Rendered a quad made of two hardcoded triangles.
 <img width="1132" height="1124" alt="image" src="https://github.com/user-attachments/assets/1702ea98-3815-47f6-982c-8a50c925699c" />
@@ -12,8 +17,6 @@ Made the quad move.
 Changed the draw call to indexed, added a color vertex attribute with a different colour per vertex. 
 <img width="1132" height="1124" alt="image" src="https://github.com/user-attachments/assets/88d83fea-ff9e-4c15-8d95-fed6c8b8ea25" />
 
-
-### Previous updates
 Chapter 3: The Rendering Pipeline - challenge \
 Loaded in train model replacing cube. Changed its position and colour.
 <img width="1298" height="1124" alt="image" src="https://github.com/user-attachments/assets/d6d8ac05-d12c-430c-8e9d-2c6ca97909cf" />
