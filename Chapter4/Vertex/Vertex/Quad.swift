@@ -7,7 +7,7 @@ struct Vertex {
 }
 
 struct Quad {
-    var vertices: [Vertex] = [
+    var oldVertices: [Vertex] = [
         Vertex(x: -1, y:  1, z: 0), // triangle 1
         Vertex(x:  1, y: -1, z: 0),
         Vertex(x: -1, y: -1, z: 0),
@@ -16,7 +16,20 @@ struct Quad {
         Vertex(x:  1, y: -1, z: 0)
     ]
     
+    var vertices: [Vertex] = [
+        Vertex(x: -1, y:  1, z: 0),
+        Vertex(x:  1, y:  1, z: 0),
+        Vertex(x: -1, y: -1, z: 0),
+        Vertex(x:  1, y: -1, z: 0)
+    ]
+    
+    var indices: [UInt16] = [
+        0, 3, 2,
+        0, 1, 3
+    ]
+    
     let vertexBuffer: MTLBuffer
+    let indexBuffer: MTLBuffer
     
     init(device: MTLDevice, scale: Float = 1)
     {
@@ -30,5 +43,13 @@ struct Quad {
             fatalError("Unable to create quad vertex buffer")
         }
         self.vertexBuffer = vertexBuffer
+        
+        guard let indexBuffer = device.makeBuffer(
+            bytes: &indices,
+            length: MemoryLayout<UInt16>.stride * indices.count,
+            options: []) else {
+            fatalError("Unable to create quad index buffer")
+        }
+        self.indexBuffer = indexBuffer
     }
 }

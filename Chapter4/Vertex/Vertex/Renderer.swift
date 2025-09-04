@@ -120,10 +120,16 @@ extension Renderer: MTKViewDelegate {
             index: 0
         )
         
+        renderEncoder.setVertexBuffer(
+            quad.indexBuffer,
+            offset: 0,
+            index: 1
+        )
+        
         renderEncoder.drawPrimitives(
             type: .triangle,
             vertexStart: 0,
-            vertexCount: quad.vertices.count
+            vertexCount: quad.indices.count
         )
 
         renderEncoder.endEncoding()
