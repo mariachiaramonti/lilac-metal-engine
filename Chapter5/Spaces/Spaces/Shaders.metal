@@ -45,9 +45,9 @@ vertex VertexOut vertex_main(
   VertexIn in [[stage_in]],
   constant float4x4 &matrix [[buffer(11)]])
 {
-  float3 translation = in.position.xyz + matrix.columns[3].xyz;
+    float4 translation = matrix * in.position;
   VertexOut out {
-    .position = float4(translation, 1)
+    .position = translation
   };
   return out;
 }
