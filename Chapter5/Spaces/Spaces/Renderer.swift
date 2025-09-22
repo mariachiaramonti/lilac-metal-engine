@@ -118,10 +118,15 @@ extension Renderer: MTKViewDelegate {
       &color,
       length: MemoryLayout<SIMD4<Float>>.stride,
       index: 0)
-    var position = simd_float3(0, 0, 0)
+    var translation = matrix_float4x4()
+      translation.columns.0 = [1, 0, 0, 0]
+      translation.columns.1 = [0, 1, 0, 0]
+      translation.columns.2 = [0, 0, 1, 0]
+      translation.columns.3 = [0, 0, 0, 1]
+      var matrix = translation
     renderEncoder.setVertexBytes(
-      &position,
-      length: MemoryLayout<SIMD3<Float>>.stride,
+      &matrix,
+      length: MemoryLayout<matrix_float4x4>.stride,
       index: 11)
     renderEncoder.drawIndexedPrimitives(
       type: .triangle,
@@ -136,10 +141,14 @@ extension Renderer: MTKViewDelegate {
       &color,
       length: MemoryLayout<SIMD4<Float>>.stride,
       index: 0)
-    position = simd_float3(0.3, -0.4, 0)
+      let position = simd_float3(0.3, -0.4, 0)
+      translation.columns.3.x = position.x
+      translation.columns.3.y = position.y
+      translation.columns.3.z = position.z
+      matrix = translation
     renderEncoder.setVertexBytes(
-      &position,
-      length: MemoryLayout<SIMD3<Float>>.stride,
+      &matrix,
+      length: MemoryLayout<matrix_float4x4>.stride,
       index: 11)
     renderEncoder.drawIndexedPrimitives(
       type: .triangle,

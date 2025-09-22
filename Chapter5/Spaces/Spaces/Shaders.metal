@@ -43,9 +43,9 @@ struct VertexOut {
 
 vertex VertexOut vertex_main(
   VertexIn in [[stage_in]],
-  constant float3 &position [[buffer(11)]])
+  constant float4x4 &matrix [[buffer(11)]])
 {
-  float3 translation = in.position.xyz + position;
+  float3 translation = in.position.xyz + matrix.columns[3].xyz;
   VertexOut out {
     .position = float4(translation, 1)
   };
