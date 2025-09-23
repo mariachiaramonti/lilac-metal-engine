@@ -6,6 +6,9 @@ Chapter 5: 3D Transformations \
 Rendered two triangles, one transformed using a translation matrix.
 <img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/7f4a1ae6-ce3a-4881-b155-7a888004dc24" />
 
+Scaled the red triangle.
+<img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/d9b41f7e-efd4-4c98-bcec-cb4e2091af01" />
+
 ### Previous updates
 Chapter 4: The Vertex Function - Challenge \
 Rendered 50 points in a circle
