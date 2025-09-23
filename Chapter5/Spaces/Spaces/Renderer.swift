@@ -145,7 +145,16 @@ extension Renderer: MTKViewDelegate {
       translation.columns.3.x = position.x
       translation.columns.3.y = position.y
       translation.columns.3.z = position.z
-      matrix = translation
+      let scaleX: Float = 1.2
+      let scaleY: Float = 0.5
+      // column-first
+      let scaleMatrix = float4x4(
+        [scaleX, 0, 0, 0],
+        [0, scaleY, 0, 0],
+        [0, 0, 1, 0],
+        [0, 0, 0, 1]
+      )
+      matrix = scaleMatrix
     renderEncoder.setVertexBytes(
       &matrix,
       length: MemoryLayout<matrix_float4x4>.stride,
