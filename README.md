@@ -9,6 +9,10 @@ Rendered two triangles, one transformed using a translation matrix.
 Scaled the red triangle.
 <img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/d9b41f7e-efd4-4c98-bcec-cb4e2091af01" />
 
+Rotated, translated and scaled the red triangle.
+<img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/77a0450d-0e25-42b8-8bad-61e1f432ea28" />
+
+
 ### Previous updates
 Chapter 4: The Vertex Function - Challenge \
 Rendered 50 points in a circle
