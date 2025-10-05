@@ -154,7 +154,15 @@ extension Renderer: MTKViewDelegate {
         [0, 0, 1, 0],
         [0, 0, 0, 1]
       )
-      matrix = scaleMatrix
+      
+      let angle = Float.pi / 2.0
+      let rotationMatrix = float4x4(
+        [cos(angle), -sin(angle), 0,    0],
+        [sin(angle),  cos(angle), 0,    0],
+        [0,           0,          1,    0],
+        [0,           0,          0,    1]
+      )
+      matrix = translation * rotationMatrix * scaleMatrix
     renderEncoder.setVertexBytes(
       &matrix,
       length: MemoryLayout<matrix_float4x4>.stride,
