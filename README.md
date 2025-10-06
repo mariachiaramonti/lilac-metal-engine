@@ -12,6 +12,9 @@ Scaled the red triangle.
 Rotated, translated and scaled the red triangle.
 <img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/77a0450d-0e25-42b8-8bad-61e1f432ea28" />
 
+Rotated it about one of its vertices instead of the origin.
+<img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/cf976d24-fc7d-4d4d-b07c-dee7fb49a2ba" />
+
 
 ### Previous updates
 Chapter 4: The Vertex Function - Challenge \
