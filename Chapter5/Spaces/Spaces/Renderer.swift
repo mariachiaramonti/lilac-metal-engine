@@ -162,7 +162,11 @@ extension Renderer: MTKViewDelegate {
         [0,           0,          1,    0],
         [0,           0,          0,    1]
       )
-      matrix = translation * rotationMatrix * scaleMatrix
+      
+      translation.columns.3.x = triangle.vertices[2].x
+      translation.columns.3.y = triangle.vertices[2].y
+      translation.columns.3.z = triangle.vertices[2].z
+      matrix = translation * rotationMatrix * translation.inverse
     renderEncoder.setVertexBytes(
       &matrix,
       length: MemoryLayout<matrix_float4x4>.stride,
