@@ -2,6 +2,11 @@
 Building a Metal rendering engine in Swift following the [Metal by Tutorials book](https://www.kodeco.com/books/metal-by-tutorials).
 
 ### Latest update
+Chapter 6: Coordinate Spaces
+Rotated a train mesh using the modelMatrix: 
+<img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/799bad31-f82d-4fd9-9247-5f47e672938c" />
+
+### Previous updates
 Chapter 5: 3D Transformations \
 Rendered two triangles, one transformed using a translation matrix.
 <img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/7f4a1ae6-ce3a-4881-b155-7a888004dc24" />
@@ -15,8 +20,6 @@ Rotated, translated and scaled the red triangle.
 Rotated it about one of its vertices instead of the origin.
 <img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/cf976d24-fc7d-4d4d-b07c-dee7fb49a2ba" />
 
-
-### Previous updates
 Chapter 4: The Vertex Function - Challenge \
 Rendered 50 points in a circle
 <img width="1132" height="1124" alt="image" src="https://github.com/user-attachments/assets/8421f0b3-425a-47f0-923a-b67bf163e5c3" />
