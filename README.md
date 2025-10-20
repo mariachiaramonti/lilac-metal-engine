@@ -2,13 +2,12 @@
 Building a Metal rendering engine in Swift following the [Metal by Tutorials book](https://www.kodeco.com/books/metal-by-tutorials).
 
 ### Latest update
-Chapter 6: Coordinate Spaces
-
+Chapter 6: Coordinate Spaces \
 Added animation: \
 ![output](https://github.com/user-attachments/assets/eae6aeaf-bd58-44f7-88dc-927ad8412a54)
 
 ### Previous updates
-Chapter 6: Coordinate Spaces
+Chapter 6: Coordinate Spaces \
 Rotated a train mesh using the modelMatrix: 
 <img width="1088" height="1250" alt="image" src="https://github.com/user-attachments/assets/799bad31-f82d-4fd9-9247-5f47e672938c" />
 
