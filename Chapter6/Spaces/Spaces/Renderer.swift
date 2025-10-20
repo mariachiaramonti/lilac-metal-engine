@@ -91,6 +91,7 @@ class Renderer: NSObject {
         let translation = float4x4(translation: [0.5, -0.4, 0])
         let rotation = float4x4(rotation: [0, 0, Float(45).degreesToRadians])
         uniforms.modelMatrix = translation * rotation
+        uniforms.viewMatrix = float4x4(translation: [0.8, 0, 0]).inverse
     }
 }
 
