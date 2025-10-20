@@ -115,6 +115,12 @@ extension Renderer: MTKViewDelegate {
         renderEncoder.setRenderPipelineState(pipelineState)
         renderEncoder.setTriangleFillMode(.lines)
         
+        timer += 0.005
+        uniforms.viewMatrix = float4x4.identity
+        let translationMatrix = float4x4(translation: [0, -0.6, 0])
+        let rotationMatrix = float4x4(rotationY: sin(timer))
+        uniforms.modelMatrix = translationMatrix * rotationMatrix
+        
         renderEncoder.setVertexBytes(
             &uniforms,
             length: MemoryLayout<Uniforms>.stride,
