@@ -106,7 +106,7 @@ extension Renderer: MTKViewDelegate {
         let aspect = Float(view.bounds.width) / Float(view.bounds.height)
         let projectionMatrix =
         float4x4(
-            projectionFov: Float(45).degreesToRadians,
+            projectionFov: Float(70).degreesToRadians,
             near: 0.1,
             far: 100,
             aspect: aspect
@@ -125,7 +125,7 @@ extension Renderer: MTKViewDelegate {
         }
         
         renderEncoder.setRenderPipelineState(pipelineState)
-        renderEncoder.setTriangleFillMode(.lines)
+        renderEncoder.setTriangleFillMode(.fill)
         
         timer += 0.005
         uniforms.viewMatrix = float4x4(translation: [0, 0, -3]).inverse
