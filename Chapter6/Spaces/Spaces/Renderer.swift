@@ -92,6 +92,9 @@ class Renderer: NSObject {
         let rotation = float4x4(rotation: [0, 0, Float(45).degreesToRadians])
         uniforms.modelMatrix = translation * rotation
         uniforms.viewMatrix = float4x4(translation: [0.8, 0, 0]).inverse
+        mtkView(
+            metalView,
+            drawableSizeWillChange: metalView.drawableSize)
     }
 }
 
@@ -100,6 +103,15 @@ extension Renderer: MTKViewDelegate {
         _ view: MTKView,
         drawableSizeWillChange size: CGSize
     ) {
+        let aspect = Float(view.bounds.width) / Float(view.bounds.height)
+        let projectionMatrix =
+        float4x4(
+            projectionFov: Float(45).degreesToRadians,
+            near: 0.1,
+            far: 100,
+            aspect: aspect
+            )
+        uniforms.projectionMatrix = projectionMatrix
     }
     
     func draw(in view: MTKView) {
@@ -116,7 +128,7 @@ extension Renderer: MTKViewDelegate {
         renderEncoder.setTriangleFillMode(.lines)
         
         timer += 0.005
-        uniforms.viewMatrix = float4x4.identity
+        uniforms.viewMatrix = float4x4(translation: [0, 0, -3]).inverse
         let translationMatrix = float4x4(translation: [0, -0.6, 0])
         let rotationMatrix = float4x4(rotationY: sin(timer))
         uniforms.modelMatrix = translationMatrix * rotationMatrix
