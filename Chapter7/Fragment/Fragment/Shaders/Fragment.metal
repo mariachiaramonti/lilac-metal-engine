@@ -40,7 +40,9 @@ struct VertexOut {
 
 fragment float4 fragment_main(VertexOut in [[stage_in]])
 {
-  return float4(0.2, 0.5, 1.0, 1);
+    float color;
+    in.position.x < 200 ? color = 0 : color = 1;
+    return float4(color, color, color, 1);
 }
 
 
