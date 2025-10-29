@@ -41,4 +41,8 @@ typedef struct {
   matrix_float4x4 projectionMatrix;
 } Uniforms;
 
+typedef struct {
+    uint32_t width;
+    uint32_t height;
+} Params;
 #endif /* Common_h */

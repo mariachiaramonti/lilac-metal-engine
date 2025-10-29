@@ -38,10 +38,12 @@ struct VertexOut {
   float4 position [[position]];
 };
 
-fragment float4 fragment_main(VertexOut in [[stage_in]])
+fragment float4 fragment_main(
+                              constant Params &params [[buffer(12)]],
+                              VertexOut in [[stage_in]])
 {
     float color;
-    in.position.x < 200 ? color = 0 : color = 1;
+    in.position.x < params.width * 0.5 ? color = 0 : color = 1;
     return float4(color, color, color, 1);
 }
 
