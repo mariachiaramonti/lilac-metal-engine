@@ -42,9 +42,14 @@ fragment float4 fragment_main(
                               constant Params &params [[buffer(12)]],
                               VertexOut in [[stage_in]])
 {
-    float color;
-    in.position.x < params.width * 0.5 ? color = 0 : color = 1;
-    return float4(color, color, color, 1);
+    uint checks = 8;
+    // 1
+    float2 uv = in.position.xy / params.width;
+    // 2
+    uv = fract(uv * checks * 0.5) - 0.5;
+    // 3
+    float3 color = step(uv.x * uv.y, 0.0);
+    return float4(color, 1.0);
 }
 
 
