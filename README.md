@@ -7,6 +7,11 @@ Render half black half white quad and apply this to train render. \
 <img width="542" height="1034" alt="image" src="https://github.com/user-attachments/assets/f47f88cf-db39-43ce-acbe-1c384b836320" />
 <img width="542" height="1034" alt="image" src="https://github.com/user-attachments/assets/47d7720f-8a51-4e7d-abe3-f2c3e15b0ea1" />
 
+Changed the pattern to checkerboard: \
+<img width="542" height="1034" alt="image" src="https://github.com/user-attachments/assets/ac4b6b42-3806-4015-a941-88060c264da7" />
+
+
+
 ### Previous updates
 Chapter 6: Coordinate Spaces \
 Rotated a train mesh using the modelMatrix: \
