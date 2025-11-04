@@ -42,7 +42,7 @@ struct VertexIn {
 
 vertex VertexOut vertex_main(
                              VertexIn in [[stage_in]],
-                             constant Uniforms &uniforms [[buffer(11)]])
+                             constant Uniforms &uniforms [[buffer(UniformsBuffer)]])
 {
     float4 position =
     uniforms.projectionMatrix * uniforms.viewMatrix

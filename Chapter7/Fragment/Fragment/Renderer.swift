@@ -40,7 +40,7 @@ class Renderer: NSObject {
     static var library: MTLLibrary!
     var modelPipelineState: MTLRenderPipelineState!
     var quadPipelineState: MTLRenderPipelineState!
-    var params = Params()
+    let depthStencilState: MTLDepthStencilState?
     
     var options: Options
     
@@ -50,8 +50,7 @@ class Renderer: NSObject {
     
     var timer: Float = 0
     var uniforms = Uniforms()
-    
-    let depthStencilState: MTLDepthStencilState?
+    var params = Params()
     
     init(metalView: MTKView, options: Options) {
         guard
@@ -106,6 +105,13 @@ class Renderer: NSObject {
             metalView,
             drawableSizeWillChange: metalView.drawableSize)
     }
+    
+    static func buildDepthStencilState() -> MTLDepthStencilState? {
+        let descriptor = MTLDepthStencilDescriptor()
+        descriptor.depthCompareFunction = .less
+        descriptor.isDepthWriteEnabled = true
+        return Renderer.device.makeDepthStencilState(descriptor: descriptor)
+    }
 }
 
 extension Renderer: MTKViewDelegate {
@@ -136,7 +142,7 @@ extension Renderer: MTKViewDelegate {
         encoder.setVertexBytes(
             &uniforms,
             length: MemoryLayout<Uniforms>.stride,
-            index: 11)
+            index: UniformsBuffer.index)
         model.render(encoder: encoder)
     }
     
@@ -160,7 +166,7 @@ extension Renderer: MTKViewDelegate {
         renderEncoder.setFragmentBytes(
             &params,
             length: MemoryLayout<Params>.stride,
-            index: 12
+            index: ParamsBuffer.index
         )
         
         if options.renderChoice == .train {
@@ -175,13 +181,6 @@ extension Renderer: MTKViewDelegate {
         }
         commandBuffer.present(drawable)
         commandBuffer.commit()
-    }
-    
-    static func buildDepthStencilState() -> MTLDepthStencilState? {
-        let descriptor = MTLDepthStencilDescriptor()
-        descriptor.depthCompareFunction = .less
-        descriptor.isDepthWriteEnabled = true
-        return Renderer.device.makeDepthStencilState(descriptor: descriptor)
     }
 }
 

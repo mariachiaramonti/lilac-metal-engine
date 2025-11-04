@@ -45,4 +45,15 @@ typedef struct {
     uint32_t width;
     uint32_t height;
 } Params;
+
+typedef enum {
+    VertexBuffer = 0,
+    UniformsBuffer = 11,
+    ParamsBuffer = 12
+} BufferIndices;
+
+typedef enum {
+    Position = 0,
+    Normal = 1
+} Attributes;
 #endif /* Common_h */

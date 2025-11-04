@@ -38,7 +38,7 @@ extension Model {
     encoder.setVertexBuffer(
       mesh.vertexBuffers[0].buffer,
       offset: 0,
-      index: 0)
+      index: VertexBuffer.index)
 
     for submesh in mesh.submeshes {
       encoder.drawIndexedPrimitives(
