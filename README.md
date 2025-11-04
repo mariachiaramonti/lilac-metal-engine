@@ -13,6 +13,9 @@ Changed the quad pattern to checkerboard: \
 Changed the quad pattern to a smooth gradient between red and blue: \
 <img width="542" height="1034" alt="image" src="https://github.com/user-attachments/assets/4afdc4e5-16b8-4b85-af5a-42c893460b48" />
 
+Added depth stencil state and normals to render the train with correct depth: \
+<img width="544" height="602" alt="image" src="https://github.com/user-attachments/assets/8e96f766-e814-4ea1-ae73-246992080b2e" />
+
 
 ### Previous updates
 Chapter 6: Coordinate Spaces \
