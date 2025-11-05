@@ -2,6 +2,13 @@
 Building a Metal rendering engine in Swift following the [Metal by Tutorials book](https://www.kodeco.com/books/metal-by-tutorials).
 
 ### Latest update
+Chapter 8: Textures \
+Load texture and render onto a house model: \
+<img width="544" height="572" alt="Screenshot 2025-11-05 at 23 06 44" src="https://github.com/user-attachments/assets/0348c98e-f0d6-4b65-b51b-a86d4bb008a8" />
+
+
+
+### Previous updates
 Chapter 7: The Fragment Function \
 Render half black half white quad and apply this to train render. \
 <img width="542" height="1034" alt="image" src="https://github.com/user-attachments/assets/f47f88cf-db39-43ce-acbe-1c384b836320" />
@@ -16,8 +23,6 @@ Changed the quad pattern to a smooth gradient between red and blue: \
 Added depth stencil state and normals to render the train with correct depth: \
 <img width="544" height="602" alt="image" src="https://github.com/user-attachments/assets/8e96f766-e814-4ea1-ae73-246992080b2e" />
 
-
-### Previous updates
 Chapter 6: Coordinate Spaces \
 Rotated a train mesh using the modelMatrix: \
 <img width="544" height="625" alt="image" src="https://github.com/user-attachments/assets/799bad31-f82d-4fd9-9247-5f47e672938c" />
