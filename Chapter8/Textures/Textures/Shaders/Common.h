@@ -59,4 +59,7 @@ typedef enum {
   UV = 2
 } Attributes;
 
+typedef enum {
+    BaseColor = 0
+} TextureIndices;
 #endif /* Common_h */
