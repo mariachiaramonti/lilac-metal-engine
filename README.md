@@ -6,6 +6,8 @@ Chapter 8: Textures \
 Load texture and render onto a house model: \
 <img width="544" height="572" alt="Screenshot 2025-11-05 at 23 06 44" src="https://github.com/user-attachments/assets/0348c98e-f0d6-4b65-b51b-a86d4bb008a8" />
 
+Added ground plane and loaded grass texture onto it with correct linear encoding: \
+<img width="544" height="572" alt="image" src="https://github.com/user-attachments/assets/b4263b45-3bf6-4791-aaed-cb7a00eb2914" />
 
 
 ### Previous updates
