@@ -53,4 +53,25 @@ enum TextureController {
         textures[name] = texture
         return texture
     }
+    
+    static func loadTexture(name: String) -> MTLTexture? {
+        if let texture = textures[name] {
+            return texture
+        }
+        let textureLoader = MTKTextureLoader(device: Renderer.device)
+        let texture: MTLTexture?
+        texture = try? textureLoader.newTexture(
+            name: name,
+            scaleFactor: 1.0,
+            bundle: Bundle.main,
+            options: nil
+        )
+        
+        if(texture != nil)
+        {
+            print("loaded texture: \(name)")
+            textures[name] = texture
+        }
+        return texture
+    }
 }

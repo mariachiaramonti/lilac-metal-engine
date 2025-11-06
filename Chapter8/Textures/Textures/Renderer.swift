@@ -49,7 +49,9 @@ class Renderer: NSObject {
     }()
     
     lazy var ground: Model = {
-        Model(name: "ground", primitiveType:  .plane)
+        let ground = Model(name: "ground", primitiveType: .plane)
+        ground.setTexture(name: "grass", type: BaseColor)
+        return ground
     }()
     
     var timer: Float = 0

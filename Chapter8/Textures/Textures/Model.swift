@@ -66,4 +66,18 @@ class Model: Transformable {
     }
 }
 
+extension Model{
+    func setTexture(name: String, type: TextureIndices)
+    {
+        if let texture = TextureController.loadTexture(name: name){
+            switch type {
+            case BaseColor:
+                meshes[0].submeshes[0].textures.baseColor = texture
+            default:
+                break
+            }
+        }
+    }
+}
+
 // swiftlint:enable force_try

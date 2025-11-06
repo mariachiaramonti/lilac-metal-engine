@@ -25,6 +25,7 @@
 		827621AE2AA8779800CE91D1 /* Vertex.metal in Sources */ = {isa = PBXBuildFile; fileRef = 827621AD2AA8779800CE91D1 /* Vertex.metal */; };
 		827621B02AA8779E00CE91D1 /* Fragment.metal in Sources */ = {isa = PBXBuildFile; fileRef = 827621AF2AA8779E00CE91D1 /* Fragment.metal */; };
 		AD763D582EBC076F006295F1 /* TextureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD763D572EBC076C006295F1 /* TextureController.swift */; };
+		AD763D5A2EBD557D006295F1 /* Textures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD763D592EBD557D006295F1 /* Textures.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		827621AD2AA8779800CE91D1 /* Vertex.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Vertex.metal; sourceTree = "<group>"; };
 		827621AF2AA8779E00CE91D1 /* Fragment.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Fragment.metal; sourceTree = "<group>"; };
 		AD763D572EBC076C006295F1 /* TextureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureController.swift; sourceTree = "<group>"; };
+		AD763D592EBD557D006295F1 /* Textures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Textures.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		824770D72AA7FA0B0095AB72 = {
 			isa = PBXGroup;
 			children = (
+				AD763D592EBD557D006295F1 /* Textures.xcassets */,
 				824770E22AA7FA0B0095AB72 /* Textures */,
 				824770E12AA7FA0B0095AB72 /* Products */,
 			);
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82133A3D2AAC1C6200D7C004 /* lowpoly-house.usdz in Resources */,
+				AD763D5A2EBD557D006295F1 /* Textures.xcassets in Resources */,
 				824770EC2AA7FA0C0095AB72 /* Preview Assets.xcassets in Resources */,
 				824770E82AA7FA0C0095AB72 /* Assets.xcassets in Resources */,
 			);
