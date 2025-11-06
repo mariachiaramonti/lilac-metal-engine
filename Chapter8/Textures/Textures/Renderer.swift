@@ -51,6 +51,7 @@ class Renderer: NSObject {
     lazy var ground: Model = {
         let ground = Model(name: "ground", primitiveType: .plane)
         ground.setTexture(name: "grass", type: BaseColor)
+        ground.tiling = 16
         return ground
     }()
     
@@ -67,6 +68,7 @@ class Renderer: NSObject {
         Self.device = device
         Self.commandQueue = commandQueue
         metalView.device = device
+        metalView.colorPixelFormat = .bgra8Unorm
         
         // create the shader function library
         let library = device.makeDefaultLibrary()

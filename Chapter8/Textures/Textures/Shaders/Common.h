@@ -1,15 +1,15 @@
 ///// Copyright (c) 2023 Kodeco Inc.
-/// 
+///
 /// Permission is hereby granted, free of charge, to any person obtaining a copy
 /// of this software and associated documentation files (the "Software"), to deal
 /// in the Software without restriction, including without limitation the rights
 /// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 /// copies of the Software, and to permit persons to whom the Software is
 /// furnished to do so, subject to the following conditions:
-/// 
+///
 /// The above copyright notice and this permission notice shall be included in
 /// all copies or substantial portions of the Software.
-/// 
+///
 /// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
 /// distribute, sublicense, create a derivative work, and/or sell copies of the
 /// Software in any work that is designed, intended, or marketed for pedagogical or
@@ -17,7 +17,7 @@
 /// or information technology.  Permission for such use, copying, modification,
 /// merger, publication, distribution, sublicensing, creation of derivative works,
 /// or sale is expressly withheld.
-/// 
+///
 /// This project and source code may use libraries or frameworks that are
 /// released under various Open-Source licenses. Use of those libraries and
 /// frameworks are governed by their own individual licenses.
@@ -36,27 +36,28 @@
 #import <simd/simd.h>
 
 typedef struct {
-  matrix_float4x4 modelMatrix;
-  matrix_float4x4 viewMatrix;
-  matrix_float4x4 projectionMatrix;
+    matrix_float4x4 modelMatrix;
+    matrix_float4x4 viewMatrix;
+    matrix_float4x4 projectionMatrix;
 } Uniforms;
 
 typedef struct {
-  uint32_t width;
-  uint32_t height;
+    uint32_t width;
+    uint32_t height;
+    uint32_t tiling;
 } Params;
 
 typedef enum {
-  VertexBuffer = 0,
-  UVBuffer = 1,
-  UniformsBuffer = 11,
-  ParamsBuffer = 12
+    VertexBuffer = 0,
+    UVBuffer = 1,
+    UniformsBuffer = 11,
+    ParamsBuffer = 12
 } BufferIndices;
 
 typedef enum {
-  Position = 0,
-  Normal = 1,
-  UV = 2
+    Position = 0,
+    Normal = 1,
+    UV = 2
 } Attributes;
 
 typedef enum {
