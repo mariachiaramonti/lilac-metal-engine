@@ -9,6 +9,10 @@ Load texture and render onto a house model: \
 Added ground plane and loaded grass texture onto it with correct linear encoding: \
 <img width="544" height="572" alt="image" src="https://github.com/user-attachments/assets/b4263b45-3bf6-4791-aaed-cb7a00eb2914" />
 
+Challenge: Added mipmaps and changed texture for house and ground: \
+<img width="544" height="572" alt="image" src="https://github.com/user-attachments/assets/f145b563-8638-45f7-8d43-d620a3d2d076" />
+
+
 
 ### Previous updates
 Chapter 7: The Fragment Function \
