@@ -42,7 +42,8 @@ fragment float4 fragment_main(
 {
     constexpr sampler textureSampler(
                                      filter::linear,
-                                     address::repeat);
+                                     address::repeat,
+                                     mip_filter::linear);
     float3 baseColor = baseColorTexture.sample(
                                                textureSampler,
                                                in.uv * params.tiling

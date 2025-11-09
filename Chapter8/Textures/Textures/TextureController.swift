@@ -43,7 +43,7 @@ enum TextureController {
         
         let textureLoader = MTKTextureLoader(device: Renderer.device)
         
-        let textureLoaderOptions: [MTKTextureLoader.Option: Any] = [.origin: MTKTextureLoader.Origin.bottomLeft]
+        let textureLoaderOptions: [MTKTextureLoader.Option: Any] = [.origin: MTKTextureLoader.Origin.bottomLeft, .generateMipmaps: true]
         
         let texture = try? textureLoader.newTexture(
             texture: texture,
