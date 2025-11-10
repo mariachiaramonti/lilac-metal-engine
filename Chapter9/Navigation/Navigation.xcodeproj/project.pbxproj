@@ -26,6 +26,7 @@
 		824A1AF22AA83518009BCA63 /* VertexDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A1AF12AA83518009BCA63 /* VertexDescriptor.swift */; };
 		827621AE2AA8779800CE91D1 /* Vertex.metal in Sources */ = {isa = PBXBuildFile; fileRef = 827621AD2AA8779800CE91D1 /* Vertex.metal */; };
 		827621B02AA8779E00CE91D1 /* Fragment.metal in Sources */ = {isa = PBXBuildFile; fileRef = 827621AF2AA8779E00CE91D1 /* Fragment.metal */; };
+		AD76F5282EC2ACA800433706 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76F5272EC2ACA300433706 /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		824A1AF12AA83518009BCA63 /* VertexDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptor.swift; sourceTree = "<group>"; };
 		827621AD2AA8779800CE91D1 /* Vertex.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Vertex.metal; sourceTree = "<group>"; };
 		827621AF2AA8779E00CE91D1 /* Fragment.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Fragment.metal; sourceTree = "<group>"; };
+		AD76F5272EC2ACA300433706 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		824770E22AA7FA0B0095AB72 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				AD76F5272EC2ACA300433706 /* GameScene.swift */,
 				824770E32AA7FA0B0095AB72 /* NavigationApp.swift */,
 				824770F62AA7FDDA0095AB72 /* Renderer.swift */,
 				822EF52E2AA86872008CC2C8 /* Rendering.swift */,
@@ -248,6 +251,7 @@
 			files = (
 				822EF52B2AA86608008CC2C8 /* Model.swift in Sources */,
 				824A1AF22AA83518009BCA63 /* VertexDescriptor.swift in Sources */,
+				AD76F5282EC2ACA800433706 /* GameScene.swift in Sources */,
 				822EF5342AA87342008CC2C8 /* Transform.swift in Sources */,
 				8224354B2AAD5734005A93D6 /* TextureController.swift in Sources */,
 				822435492AAD5217005A93D6 /* Primitive.swift in Sources */,
