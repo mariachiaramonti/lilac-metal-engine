@@ -30,36 +30,32 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import MetalKit
+import GameController
 
-struct GameScene {
-    lazy var house: Model = {
-        let house = Model(name: "lowpoly-house.usdz")
-        house.setTexture(name: "barn-color", type: BaseColor)
-        return house
-    }()
-    lazy var ground: Model = {
-        let ground = Model(name: "ground", primitiveType: .plane)
-        ground.setTexture(name: "barn-ground", type: BaseColor)
-        ground.tiling = 16
-        ground.transform.scale = 40
-        ground.transform.rotation.z = Float(90).degreesToRadians
-        return ground
-    }()
-    lazy var models: [Model] = [ground, house]
+class InputController{
+    static let shared = InputController()
     
-    var camera = FPCamera()
+    var keysPressed: Set<GCKeyCode> = []
     
-    init() {
-        camera.position = [0, 1.4, -4.0]
-    }
-    mutating func update(size: CGSize){
-        camera.update(size: size)
-    }
-    mutating func update(deltaTime: Float){
-        camera.rotation.y = sin(deltaTime)
-        if InputController.shared.keysPressed.contains(.keyH){
-            print("H key pressed")
-        }
+    private init() {
+        let center = NotificationCenter.default
+        center.addObserver(
+            forName: .GCKeyboardDidConnect,
+            object: nil,
+            queue: nil) { notification in
+                let keyboard = notification.object as? GCKeyboard
+                    keyboard?.keyboardInput?.keyChangedHandler
+                        = { _, _, keyCode, pressed in
+                    if pressed {
+                        self.keysPressed.insert(keyCode)
+                    }
+                    else {
+                        self.keysPressed.remove(keyCode)
+                    }
+                }
+            }
+#if os(macOS)
+        NSEvent.addLocalMonitorForEvents(matching: [.keyUp, .keyDown]) { _ in nil}
+#endif
     }
 }
