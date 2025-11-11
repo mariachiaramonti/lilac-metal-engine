@@ -30,33 +30,42 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import MetalKit
+import CoreGraphics
 
-struct GameScene {
-    lazy var house: Model = {
-        let house = Model(name: "lowpoly-house.usdz")
-        house.setTexture(name: "barn-color", type: BaseColor)
-        return house
-    }()
-    lazy var ground: Model = {
-        let ground = Model(name: "ground", primitiveType: .plane)
-        ground.setTexture(name: "barn-ground", type: BaseColor)
-        ground.tiling = 16
-        ground.transform.scale = 40
-        ground.transform.rotation.z = Float(90).degreesToRadians
-        return ground
-    }()
-    lazy var models: [Model] = [ground, house]
-    
-    var camera = FPCamera()
-    
-    init() {
-        camera.position = [0, 1.4, -4.0]
+protocol Camera: Transformable {
+    var projectionMatrix: float4x4 { get }
+    var viewMatrix: float4x4 { get }
+    mutating func update(size: CGSize)
+    mutating func update(deltaTime: Float)
+}
+
+struct FPCamera: Camera {
+    var transform = Transform()
+    var aspect: Float = 1.0
+    var fov = Float(70).degreesToRadians
+    var near: Float = 0.1
+    var far: Float = 100
+    var projectionMatrix: float4x4 {
+        float4x4(
+            projectionFov: fov,
+            near: near,
+            far: far,
+            aspect: aspect
+        )
     }
+    
     mutating func update(size: CGSize){
-        camera.update(size: size)
+        aspect = Float(size.width / size.height)
     }
+    
     mutating func update(deltaTime: Float){
-        camera.rotation.y = sin(deltaTime)
+        
+    }
+    
+    var viewMatrix: float4x4 {
+        (float4x4(rotation: rotation) *
+         float4x4(translation: position)).inverse
     }
 }
+
+
