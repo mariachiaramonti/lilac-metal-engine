@@ -42,7 +42,7 @@ class Renderer: NSObject {
     var pipelineState: MTLRenderPipelineState!
     let depthStencilState: MTLDepthStencilState?
     
-    var timer: Float = 0
+    var lastTime: Double = CFAbsoluteTimeGetCurrent()
     var uniforms = Uniforms()
     var params = Params()
     lazy var scene = GameScene()
@@ -121,13 +121,15 @@ extension Renderer: MTKViewDelegate {
             return
         }
         
-        timer += 0.005
         
         renderEncoder.setDepthStencilState(depthStencilState)
         renderEncoder.setRenderPipelineState(pipelineState)
         
         // update and render
-        scene.update(deltaTime: timer)
+        let currentTime = CFAbsoluteTimeGetCurrent()
+        let deltaTime = Float(currentTime - lastTime)
+        lastTime = currentTime
+        scene.update(deltaTime: deltaTime)
         uniforms.viewMatrix = scene.camera.viewMatrix
         uniforms.projectionMatrix = scene.camera.projectionMatrix
         

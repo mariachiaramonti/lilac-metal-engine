@@ -59,13 +59,17 @@ struct FPCamera: Camera {
     }
     
     mutating func update(deltaTime: Float){
-        
+        let transform = updateInput(deltaTime: deltaTime)
+        rotation += transform.rotation
     }
     
     var viewMatrix: float4x4 {
         (float4x4(rotation: rotation) *
          float4x4(translation: position)).inverse
     }
+
 }
+
+extension FPCamera: Movement {}
 
 

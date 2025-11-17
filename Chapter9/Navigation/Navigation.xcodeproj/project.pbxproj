@@ -29,6 +29,7 @@
 		AD76F5282EC2ACA800433706 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76F5272EC2ACA300433706 /* GameScene.swift */; };
 		AD76F52A2EC3EB9A00433706 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76F5292EC3EB9900433706 /* Camera.swift */; };
 		AD76F52C2EC3EE5000433706 /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76F52B2EC3EE4D00433706 /* InputController.swift */; };
+		AD76F52E2ECBD3D900433706 /* Movement.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD76F52D2ECBD3C000433706 /* Movement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		AD76F5272EC2ACA300433706 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		AD76F5292EC3EB9900433706 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		AD76F52B2EC3EE4D00433706 /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
+		AD76F52D2ECBD3C000433706 /* Movement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		824770E22AA7FA0B0095AB72 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				AD76F52D2ECBD3C000433706 /* Movement.swift */,
 				AD76F52B2EC3EE4D00433706 /* InputController.swift */,
 				AD76F5292EC3EB9900433706 /* Camera.swift */,
 				AD76F5272EC2ACA300433706 /* GameScene.swift */,
@@ -269,6 +272,7 @@
 				82133A372AAC044B00D7C004 /* Mesh.swift in Sources */,
 				824771002AA80C930095AB72 /* MetalView.swift in Sources */,
 				827621B02AA8779E00CE91D1 /* Fragment.metal in Sources */,
+				AD76F52E2ECBD3D900433706 /* Movement.swift in Sources */,
 				824770E42AA7FA0B0095AB72 /* NavigationApp.swift in Sources */,
 				827621AE2AA8779800CE91D1 /* Vertex.metal in Sources */,
 				822EF52F2AA86872008CC2C8 /* Rendering.swift in Sources */,

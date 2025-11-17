@@ -30,33 +30,27 @@
 /// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 /// THE SOFTWARE.
 
-import MetalKit
+enum Settings {
+    static var rotationSpeed: Float { 2.0 }
+    static var translationSpeed: Float { 3.0 }
+    static var mouseScrollSensitivity: Float { 0.1 }
+    static var mousePanSensitivity: Float { 0.008 }
+}
 
-struct GameScene {
-    lazy var house: Model = {
-        let house = Model(name: "lowpoly-house.usdz")
-        house.setTexture(name: "barn-color", type: BaseColor)
-        return house
-    }()
-    lazy var ground: Model = {
-        let ground = Model(name: "ground", primitiveType: .plane)
-        ground.setTexture(name: "barn-ground", type: BaseColor)
-        ground.tiling = 16
-        ground.transform.scale = 40
-        ground.transform.rotation.z = Float(90).degreesToRadians
-        return ground
-    }()
-    lazy var models: [Model] = [ground, house]
-    
-    var camera = FPCamera()
-    
-    init() {
-        camera.position = [0, 1.4, -4.0]
-    }
-    mutating func update(size: CGSize){
-        camera.update(size: size)
-    }
-    mutating func update(deltaTime: Float){
-        camera.update(deltaTime: deltaTime)
+protocol Movement where Self: Transformable {
+}
+
+extension Movement {
+    func updateInput(deltaTime: Float) -> Transform {
+        var transform = Transform()
+        let rotationAmount = deltaTime * Settings.rotationSpeed
+        let input = InputController.shared
+        if input.keysPressed.contains(.leftArrow){
+            transform.rotation.y -= rotationAmount
+        }
+        if input.keysPressed.contains(.rightArrow){
+            transform.rotation.y += rotationAmount
+        }
+        return transform
     }
 }
