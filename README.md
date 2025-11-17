@@ -2,6 +2,11 @@
 Building a Metal rendering engine in Swift following the [Metal by Tutorials book](https://www.kodeco.com/books/metal-by-tutorials).
 
 ### Latest update
+Chapter 9: Navigating a 3D Scene \
+Added camera movement with arrow keys.
+
+
+### Previous updates
 Chapter 8: Textures \
 Load texture and render onto a house model: \
 <img width="544" height="572" alt="Screenshot 2025-11-05 at 23 06 44" src="https://github.com/user-attachments/assets/0348c98e-f0d6-4b65-b51b-a86d4bb008a8" />
@@ -12,9 +17,6 @@ Added ground plane and loaded grass texture onto it with correct linear encoding
 Challenge: Added mipmaps and changed texture for house and ground: \
 <img width="544" height="572" alt="image" src="https://github.com/user-attachments/assets/f145b563-8638-45f7-8d43-d620a3d2d076" />
 
-
-
-### Previous updates
 Chapter 7: The Fragment Function \
 Render half black half white quad and apply this to train render. \
 <img width="542" height="1034" alt="image" src="https://github.com/user-attachments/assets/f47f88cf-db39-43ce-acbe-1c384b836320" />
