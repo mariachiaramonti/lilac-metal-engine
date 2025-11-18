@@ -51,6 +51,33 @@ extension Movement {
         if input.keysPressed.contains(.rightArrow){
             transform.rotation.y += rotationAmount
         }
+        var direction: float3 = .zero
+        if input.keysPressed.contains(.keyW) {
+            direction.z += 1
+        }
+        if input.keysPressed.contains(.keyS) {
+            direction.z -= 1
+        }
+        if input.keysPressed.contains(.keyA) {
+            direction.x -= 1
+        }
+        if input.keysPressed.contains(.keyD) {
+            direction.x += 1
+        }
+        
+        let translationAmount = deltaTime * Settings.translationSpeed
+        if direction != .zero {
+            direction = normalize(direction)
+            transform.position += (direction.z * forwardVector + direction.x * rightVector) * translationAmount
+        }
         return transform
+    }
+    
+    var forwardVector: float3 {
+        normalize([sin(rotation.y), 0, cos(rotation.y)])
+    }
+    
+    var rightVector: float3 {
+        [forwardVector.z, forwardVector.y, -forwardVector.x]
     }
 }
