@@ -48,12 +48,11 @@ struct GameScene {
     }()
     lazy var models: [Model] = [ground, house]
     
-    var camera = ArcballCamera()
+    var camera = OrthographicCamera()
     
     init() {
-        camera.position = [0, 1.4, -4.0]
-        camera.distance = length(camera.position)
-        camera.target = [0, 1.2, 0]
+        camera.position = [0, 2, 0]
+        camera.rotation.x = .pi/2
     }
     mutating func update(size: CGSize){
         camera.update(size: size)
