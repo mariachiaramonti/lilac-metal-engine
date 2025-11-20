@@ -3,7 +3,10 @@ Building a Metal rendering engine in Swift following the [Metal by Tutorials boo
 
 ### Latest update
 Chapter 9: Navigating a 3D Scene \
-Added camera movement with arrow keys.
+Added camera movement with arrow keys and WASD keys. \
+\
+Added trackpad camera movement. Here is a picture of the inside of the barn: \
+<img width="544" height="572" alt="image" src="https://github.com/user-attachments/assets/2b748bb3-1736-4fe4-96dc-b717fcdeb3d7" />
 
 
 ### Previous updates
