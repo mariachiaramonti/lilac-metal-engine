@@ -8,6 +8,8 @@ Added camera movement with arrow keys and WASD keys. \
 Added trackpad camera movement. Here is a picture of the inside of the barn: \
 <img width="544" height="572" alt="image" src="https://github.com/user-attachments/assets/2b748bb3-1736-4fe4-96dc-b717fcdeb3d7" />
 
+Added orthographic camera and temporarily replaced main camera with it \
+<img width="544" height="572" alt="image" src="https://github.com/user-attachments/assets/5c9b941d-f7c4-46ed-81c9-c901ccb2b556" />
 
 ### Previous updates
 Chapter 8: Textures \
