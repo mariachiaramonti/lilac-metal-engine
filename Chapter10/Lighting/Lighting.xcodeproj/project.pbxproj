@@ -35,6 +35,8 @@
 		8272AC4A2AADB776007301AB /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8272AC482AADB776007301AB /* Transform.swift */; };
 		827621AE2AA8779800CE91D1 /* Vertex.metal in Sources */ = {isa = PBXBuildFile; fileRef = 827621AD2AA8779800CE91D1 /* Vertex.metal */; };
 		827621B02AA8779E00CE91D1 /* Fragment.metal in Sources */ = {isa = PBXBuildFile; fileRef = 827621AF2AA8779E00CE91D1 /* Fragment.metal */; };
+		ADF0DD4E2F54B59E005696AC /* SceneLighting.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF0DD4D2F54B59A005696AC /* SceneLighting.swift */; };
+		ADF0DD522F54B9F3005696AC /* Lighting.metal in Sources */ = {isa = PBXBuildFile; fileRef = ADF0DD512F54B9F3005696AC /* Lighting.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +72,9 @@
 		8272AC482AADB776007301AB /* Transform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transform.swift; sourceTree = "<group>"; };
 		827621AD2AA8779800CE91D1 /* Vertex.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Vertex.metal; sourceTree = "<group>"; };
 		827621AF2AA8779E00CE91D1 /* Fragment.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Fragment.metal; sourceTree = "<group>"; };
+		ADF0DD4D2F54B59A005696AC /* SceneLighting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneLighting.swift; sourceTree = "<group>"; };
+		ADF0DD502F54B9AF005696AC /* Lighting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lighting.h; sourceTree = "<group>"; };
+		ADF0DD512F54B9F3005696AC /* Lighting.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Lighting.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +114,8 @@
 				82133A352AAC005300D7C004 /* ShaderDefs.h */,
 				827621AD2AA8779800CE91D1 /* Vertex.metal */,
 				827621AF2AA8779E00CE91D1 /* Fragment.metal */,
+				ADF0DD502F54B9AF005696AC /* Lighting.h */,
+				ADF0DD512F54B9F3005696AC /* Lighting.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -159,6 +166,7 @@
 		8272AC392AAD96EA007301AB /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				ADF0DD4D2F54B59A005696AC /* SceneLighting.swift */,
 				8272AC3A2AAD96F9007301AB /* GameController.swift */,
 				824770F62AA7FDDA0095AB72 /* Renderer.swift */,
 				8272AC2F2AAD8A19007301AB /* GameScene.swift */,
@@ -316,11 +324,13 @@
 				8272AC342AAD8E3A007301AB /* InputController.swift in Sources */,
 				8272AC422AADB6E9007301AB /* DebugLights.metal in Sources */,
 				824770F72AA7FDDA0095AB72 /* Renderer.swift in Sources */,
+				ADF0DD4E2F54B59E005696AC /* SceneLighting.swift in Sources */,
 				822EF5292AA865D2008CC2C8 /* MathLibrary.swift in Sources */,
 				824770E62AA7FA0B0095AB72 /* ContentView.swift in Sources */,
 				8272AC382AAD9381007301AB /* PlayerCamera.swift in Sources */,
 				82133A372AAC044B00D7C004 /* Mesh.swift in Sources */,
 				8272AC3B2AAD96F9007301AB /* GameController.swift in Sources */,
+				ADF0DD522F54B9F3005696AC /* Lighting.metal in Sources */,
 				824771002AA80C930095AB72 /* MetalView.swift in Sources */,
 				827621B02AA8779E00CE91D1 /* Fragment.metal in Sources */,
 				8272AC4A2AADB776007301AB /* Transform.swift in Sources */,
