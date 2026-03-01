@@ -2,6 +2,12 @@
 Building a Metal rendering engine in Swift following the [Metal by Tutorials book](https://www.kodeco.com/books/metal-by-tutorials).
 
 ### Latest update
+Chapter 10: Lighting Fundamentals \
+Added a sphere with Phong lighting and one light. \
+<img width="1012" height="562" alt="Screenshot 2026-03-01 at 18 31 07" src="https://github.com/user-attachments/assets/97a4fdc3-1197-43f7-9978-b6ef787d7b37" />
+
+
+### Previous updates
 Chapter 9: Navigating a 3D Scene \
 Added camera movement with arrow keys and WASD keys. \
 \
@@ -11,7 +17,6 @@ Added trackpad camera movement. Here is a picture of the inside of the barn: \
 Added orthographic camera and temporarily replaced main camera with it \
 <img width="544" height="572" alt="image" src="https://github.com/user-attachments/assets/5c9b941d-f7c4-46ed-81c9-c901ccb2b556" />
 
-### Previous updates
 Chapter 8: Textures \
 Load texture and render onto a house model: \
 <img width="544" height="572" alt="Screenshot 2025-11-05 at 23 06 44" src="https://github.com/user-attachments/assets/0348c98e-f0d6-4b65-b51b-a86d4bb008a8" />
